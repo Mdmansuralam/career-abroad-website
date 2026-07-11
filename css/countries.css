@@ -1,0 +1,252 @@
+/* ================================
+   COUNTRIES CSS - Career Abroad Website
+   ================================ */
+
+.countries-section {
+    background-color: var(--white);
+}
+
+.countriesSwiper {
+    padding-bottom: 80px;
+}
+
+/* Country Card */
+.country-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.country-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.country-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.country-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.country-card:hover .country-image img {
+    transform: scale(1.1);
+}
+
+.country-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(11, 61, 145, 0) 0%, rgba(11, 61, 145, 0.8) 100%);
+    transition: all 0.3s ease;
+}
+
+.country-card:hover .country-overlay {
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.1) 0%, rgba(11, 61, 145, 0.9) 100%);
+}
+
+.country-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 20px;
+    z-index: 2;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.country-card:hover .country-content {
+    transform: translateY(0);
+}
+
+.country-content h3 {
+    color: var(--white);
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.country-card:hover .country-content h3 {
+    color: var(--secondary-color);
+}
+
+.country-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.btn-country {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.btn-country:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+/* Swiper Navigation */
+.countriesSwiper .swiper-button-next,
+.countriesSwiper .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.countriesSwiper .swiper-button-next:hover,
+.countriesSwiper .swiper-button-prev:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    transform: scale(1.1);
+}
+
+.countriesSwiper .swiper-button-next::after,
+.countriesSwiper .swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.countriesSwiper .swiper-pagination-bullet {
+    background-color: var(--primary-color);
+}
+
+.countriesSwiper .swiper-pagination-bullet-active {
+    background-color: var(--secondary-color);
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .country-card {
+        height: 350px;
+    }
+
+    .country-content {
+        padding: 25px 15px;
+    }
+
+    .country-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .country-content p {
+        font-size: 0.9rem;
+    }
+
+    .countriesSwiper .swiper-button-next,
+    .countriesSwiper .swiper-button-prev {
+        width: 45px;
+        height: 45px;
+    }
+
+    .countriesSwiper .swiper-button-next::after,
+    .countriesSwiper .swiper-button-prev::after {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .country-card {
+        height: 300px;
+    }
+
+    .country-content {
+        padding: 20px 15px;
+    }
+
+    .country-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .country-content p {
+        font-size: 0.85rem;
+    }
+
+    .btn-country {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .countriesSwiper .swiper-button-next,
+    .countriesSwiper .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .countriesSwiper .swiper-button-next::after,
+    .countriesSwiper .swiper-button-prev::after {
+        font-size: 14px;
+    }
+
+    .countriesSwiper {
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .country-card {
+        height: 250px;
+    }
+
+    .country-content {
+        padding: 15px 12px;
+    }
+
+    .country-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .country-content p {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .btn-country {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .countriesSwiper .swiper-button-next,
+    .countriesSwiper .swiper-button-prev {
+        display: none;
+    }
+
+    .countriesSwiper {
+        padding-bottom: 50px;
+    }
+
+    .countriesSwiper .swiper-pagination {
+        bottom: 0;
+    }
+}
